@@ -41,7 +41,7 @@ export const SignUp = (props) => {
 	const submitCredentials = (e) => {
 		e.preventDefault();
 		if (credentials.password === confirmPassword.confirmPassword) {
-			window.localStorage.setItem('username', credentials.password);
+			window.localStorage.setItem('username', credentials.username);
 			window.localStorage.setItem('password', credentials.password);
 			window.localStorage.setItem('auth', false);
 			props.history.push('/login');
