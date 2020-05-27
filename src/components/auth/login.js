@@ -37,7 +37,7 @@ export const Login = (props) => {
 			login.password === registeredPassword
 		) {
 			window.localStorage.setItem('auth', true);
-			props.history.push('/applicants');
+			props.history.push('/');
 		} else {
 			alert('Invalid Credentials!');
 		}

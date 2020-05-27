@@ -29,12 +29,12 @@ const App = () => {
 			<Route path='/login' component={Login} />
 			<PrivateRoute
 				exact
-				path='/applicants'
+				path='/'
 				render={(props) => <MainView {...props} data={data} />}
 			/>
 			<Route
 				exact
-				path='/applicants/:id'
+				path='/:id'
 				render={(props) => <DetailedView {...props} data={data} />}
 			/>
 		</>
