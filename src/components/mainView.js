@@ -38,6 +38,7 @@ export const MainView = (props) => {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 1rem;
+	justify-items: center;
 	width: 80%;
 	margin: auto;
 	margin-top: 2rem;
