@@ -10,10 +10,16 @@ const HeaderContainer = Styled.div`
 `;
 
 export const Header = (props) => {
+	const changeAuth = () => {
+		window.localStorage.setItem('auth', false);
+	};
+
 	return (
 		<HeaderContainer>
 			<h2>Track Card Applicant Information</h2>
-			<Link to='/login'>Logout</Link>
+			<Link to='/login' onClick={changeAuth}>
+				Logout
+			</Link>
 		</HeaderContainer>
 	);
 };
