@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import { v4 as uuidv4 } from 'uuid';
+
 export const DetailedView = (props) => {
 	const [applicant, setApplicant] = useState();
 	const { id } = useParams();
@@ -16,11 +18,11 @@ export const DetailedView = (props) => {
 	return (
 		<>
 			{applicant === undefined ? (
-				'loading'
+				''
 			) : (
 				<div>
 					{applicant.map((info) => (
-						<div>
+						<div key={uuidv4()}>
 							<p>
 								{info.first_name} {info.last_name}
 							</p>
