@@ -15,7 +15,7 @@ const App = () => {
 
 	useEffect(() => {
 		axios
-			.get(`http://private-041255-sakura3.apiary-mock.com/applicants`)
+			.get(`https://private-041255-sakura3.apiary-mock.com/applicants`)
 			.then((res) => {
 				console.log(res.data);
 				setData(res.data);
@@ -25,18 +25,18 @@ const App = () => {
 
 	return (
 		<>
-			<Route path='/signup' component={SignUp} />
-			<Route path='/login' component={Login} />
 			<PrivateRoute
 				exact
-				path='/'
+				path='/applicants'
 				render={(props) => <MainView {...props} data={data} />}
 			/>
 			<Route
 				exact
-				path='/:id'
+				path='/applicants/:id'
 				render={(props) => <DetailedView {...props} data={data} />}
 			/>
+			<Route path='/signup' component={SignUp} />
+			<Route exact path='/' component={Login} />
 		</>
 	);
 };

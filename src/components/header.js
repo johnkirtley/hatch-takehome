@@ -17,7 +17,7 @@ export const Header = (props) => {
 	return (
 		<HeaderContainer>
 			<h2>Track Card Applicant Information</h2>
-			<Link to='/login' onClick={changeAuth}>
+			<Link to='/' onClick={changeAuth}>
 				Logout
 			</Link>
 		</HeaderContainer>

@@ -44,7 +44,7 @@ export const SignUp = (props) => {
 			window.localStorage.setItem('username', credentials.username);
 			window.localStorage.setItem('password', credentials.password);
 			window.localStorage.setItem('auth', false);
-			props.history.push('/login');
+			props.history.push('/');
 		} else {
 			alert('Passwords Do Not Match!');
 		}
@@ -78,7 +78,7 @@ export const SignUp = (props) => {
 					</Button>
 				</Form.Item>
 				<Form.Item {...tailLayout}>
-					<Link to='/login'>Already Have An Account?</Link>
+					<Link to='/'>Already Have An Account?</Link>
 				</Form.Item>
 			</Form>
 		</div>
