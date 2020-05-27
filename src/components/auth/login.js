@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Input, Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 const layout = {
 	labelCol: { span: 8 },
@@ -62,6 +63,9 @@ export const Login = (props) => {
 					<Button type='primary' onClick={submitCredentials}>
 						Submit
 					</Button>
+				</Form.Item>
+				<Form.Item {...tailLayout}>
+					<Link to='/signup'>Need To Register?</Link>
 				</Form.Item>
 			</Form>
 		</div>
