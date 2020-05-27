@@ -1,14 +1,19 @@
 import React from 'react';
 import Styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const HeaderContainer = Styled.div`
-    text-align: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 2rem 0;
 `;
 
-export const Header = () => {
+export const Header = (props) => {
 	return (
 		<HeaderContainer>
 			<h2>Track Card Applicant Information</h2>
+			<Link to='/login'>Logout</Link>
 		</HeaderContainer>
 	);
 };
