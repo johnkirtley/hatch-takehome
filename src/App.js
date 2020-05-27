@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import { SignUp } from './components/auth/signup';
 import { Login } from './components/auth/login';
+import { PrivateRoute } from './components/auth/privateRoute';
 import { MainView } from './components/mainView';
 import { DetailedView } from './components/detailedView';
 
@@ -26,7 +27,7 @@ const App = () => {
 		<>
 			<Route path='/signup' component={SignUp} />
 			<Route path='/login' component={Login} />
-			<Route
+			<PrivateRoute
 				exact
 				path='/applicants'
 				render={(props) => <MainView {...props} data={data} />}

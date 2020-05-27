@@ -30,7 +30,7 @@ export const Sorting = (props) => {
 
 	return (
 		<ButtonContainer>
-			<h2>Sort By Credit Score</h2>
+			<h2 style={{ fontSize: '1rem' }}>Sort By Credit Score</h2>
 			<div>
 				<button onClick={sortAsc}>Sort ASC</button>
 				<button onClick={sortDesc}>Sort DESC</button>
