@@ -15,7 +15,7 @@ const App = () => {
 
 	useEffect(() => {
 		axios
-			.get(`http://private-041255-sakura3.apiary-mock.com/applicants`)
+			.get(`https://private-041255-sakura3.apiary-mock.com/applicants`)
 			.then((res) => {
 				console.log(res.data);
 				setData(res.data);
