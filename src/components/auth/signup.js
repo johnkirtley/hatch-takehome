@@ -42,6 +42,7 @@ export const SignUp = (props) => {
 		if (credentials.password === confirmPassword.confirmPassword) {
 			window.localStorage.setItem('username', credentials.password);
 			window.localStorage.setItem('password', credentials.password);
+			window.localStorage.setItem('auth', false);
 			props.history.push('/login');
 		} else {
 			alert('Passwords Do Not Match!');
