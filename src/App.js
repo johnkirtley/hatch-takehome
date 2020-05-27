@@ -25,18 +25,18 @@ const App = () => {
 
 	return (
 		<>
-			<Route path='/signup' component={SignUp} />
-			<Route path='/login' component={Login} />
 			<PrivateRoute
 				exact
-				path='/'
+				path='/applicants'
 				render={(props) => <MainView {...props} data={data} />}
 			/>
 			<Route
 				exact
-				path='/:id'
+				path='/applicants/:id'
 				render={(props) => <DetailedView {...props} data={data} />}
 			/>
+			<Route path='/signup' component={SignUp} />
+			<Route exact path='/' component={Login} />
 		</>
 	);
 };
