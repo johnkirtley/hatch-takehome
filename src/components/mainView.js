@@ -72,7 +72,7 @@ export const MainView = (props) => {
 								alignItems: 'center',
 								flexFlow: 'column',
 							}}>
-							<p>Credit Score:</p>
+							<p>Credit Indicator:</p>
 							<p>{person.credit_indicator}</p>
 						</div>
 					</Card>
