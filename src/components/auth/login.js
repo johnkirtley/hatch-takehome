@@ -57,7 +57,7 @@ export const Login = (props) => {
 					label='Password'
 					htmlFor='password'
 					rules={[{ required: true, message: 'Please Enter a Password' }]}>
-					<Input name='password' onChange={handleChanges} />
+					<Input name='password' onChange={handleChanges} type='password' />
 				</Form.Item>
 				<Form.Item {...tailLayout} htmlType='submit'>
 					<Button type='primary' onClick={submitCredentials}>
